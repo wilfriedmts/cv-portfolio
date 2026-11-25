@@ -1,3 +1,4 @@
+
 name: Validate and deploy CV portfolio
 
 on:
@@ -28,8 +29,7 @@ jobs:
           node-version: 22
 
       - name: Validate HTML
-        run: |
-          npx --yes html-validate "**/*.html"
+        run: npx --yes html-validate "**/*.html"
 
       - name: Install Lychee
         uses: taiki-e/install-action@v2
@@ -37,8 +37,7 @@ jobs:
           tool: lychee
 
       - name: Check internal links
-        run: |
-          lychee --offline --no-progress --verbose "**/*.html"
+        run: lychee --offline --no-progress --verbose "**/*.html"
 
   deploy:
     name: Deploy to GitHub Pages
@@ -46,6 +45,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
+      contents: read
       pages: write
       id-token: write
 
@@ -63,10 +63,7 @@ jobs:
       - name: Upload website
         uses: actions/upload-pages-artifact@v3
         with:
-          path: |
-            .
-            !.git
-            !.github
+          path: .
 
       - name: Deploy website
         id: deployment
