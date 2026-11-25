@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Lettre de Motivation - Wilfried METAIS - Pilote</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      /* =====================================================
+           COULEUR PRINCIPALE — BLEU AÉRONAUTIQUE
+        ===================================================== */
+
+      .gradient-bg {
+        background: linear-gradient(
+          135deg,
+          #0b3a5b 0%,
+          #176b87 100%
+        ) !important;
+      }
+
+      .lm-header {
+        padding-top: 22px !important;
+        padding-bottom: 22px !important;
+      }
+
+      .lm-footer {
+        background: #0b3a5b !important;
+      }
+
+      /* =====================================================
+           VALEURS D'IMPRESSION
+        ===================================================== */
+
+      @media print {
+        /* Marges physiques de la feuille imprimée */
+        @page {
+          size: A4;
+          margin: 8mm;
+        }
+
+        * {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+
+        html,
+        body {
+          margin: 0 !important;
+          padding: 0 !important;
+          background: white !important;
+        }
+
+        /* Masque le bouton */
+        #print-btn {
+          display: none !important;
+        }
+
+        /* Le document occupe automatiquement
+       la zone restante après les marges @page */
+        .lm-wrapper {
+          width: 100% !important;
+          max-width: none !important;
+
+          margin: 0 !important;
+          padding: 0 !important;
+
+          box-shadow: none !important;
+          border-radius: 0 !important;
+
+          min-height: calc(297mm - 16mm) !important;
+          height: calc(297mm - 16mm) !important;
+
+          display: flex !important;
+          flex-direction: column !important;
+
+          overflow: hidden !important;
+        }
+
+        /* Header */
+        .lm-header {
+          flex-shrink: 0 !important;
+          padding: 14px !important;
+        }
+
+        .lm-header h1 {
+          font-size: 24px !important;
+          margin-bottom: 2px !important;
+        }
+
+        .lm-header span {
+          font-size: 15px !important;
+        }
+
+        /* Contenu */
+        .lm-content {
+          flex: 1 !important;
+          display: flex !important;
+          flex-direction: column !important;
+
+          padding: 24px !important;
+          min-height: 0 !important;
+        }
+
+        /* Texte */
+        .lm-content p,
+        .lm-content li,
+        .lm-content span {
+          font-size: 14px !important;
+        }
+
+        .lm-content .leading-relaxed {
+          line-height: 1.5 !important;
+        }
+
+        /* Espacements */
+        .lm-content .space-y-4 {
+          gap: 10px !important;
+        }
+
+        .lm-content .mb-4 {
+          margin-bottom: 6px !important;
+        }
+
+        .lm-content .mb-6 {
+          margin-bottom: 8px !important;
+        }
+
+        .lm-content .mb-8 {
+          margin-bottom: 10px !important;
+        }
+
+        .lm-content .mt-6 {
+          margin-top: 8px !important;
+        }
+
+        .lm-content .mt-8 {
+          margin-top: 10px !important;
+        }
+
+        /* Signature */
+        .lm-content > .text-right {
+          margin-bottom: 0 !important;
+        }
+
+        /* Footer toujours en bas */
+        .lm-footer {
+          margin-top: auto !important;
+          flex-shrink: 0 !important;
+
+          padding: 8px !important;
+          font-size: 10px !important;
+
+          background: #0b3a5b !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-400 p-8">
+    <!-- =====================================================
+         BOUTON IMPRIMER
+         ===================================================== -->
+
+    <!-- Barre d'actions (masquée à l'impression) -->
+    <div class="max-w-5xl mx-auto mb-3 flex justify-end print:hidden">
+        <div class="inline-flex items-center gap-1 bg-white rounded-full shadow-md border border-air-border p-1">
+
+            <!-- Bouton Retour -->
+            <a href="../36_2376_435426/index.html" title="Retour" aria-label="Retour"
+            class="flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-semibold text-air hover:bg-air-light transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="block">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back
+            </a>
+
+            <span class="w-px h-5 bg-air-border" aria-hidden="true"></span>
+
+            <!-- Langue -->
+            <a href="../37_2376_435426/lm_fr_435426.html" hreflang="en" lang="en" title="English version" aria-label="English version"
+            class="flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-semibold text-air hover:bg-air-light transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" width="24" height="16" class="block rounded-sm">
+                    <rect width="1" height="2" fill="#002654"/>
+                    <rect x="1" width="1" height="2" fill="#fff"/>
+                    <rect x="2" width="1" height="2" fill="#CE1126"/>
+                </svg>
+                FR
+            </a>
+
+            <span class="w-px h-5 bg-air-border" aria-hidden="true"></span>
+
+            <!-- Impression -->
+            <button onclick="window.print()"
+                    class="flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-semibold text-white gradient-bg hover:opacity-90 transition-opacity cursor-pointer">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+                </svg>
+                Print
+            </button>
+        </div>
+    </div>
+
+    <!-- =====================================================
+         PAGE
+         ===================================================== -->
+
+    <div
+      class="lm-wrapper max-w-3xl mx-auto bg-white shadow-2xl rounded-lg overflow-hidden"
+    >
+      <!-- =================================================
+             EN-TÊTE
+             ================================================= -->
+
+      <div class="gradient-bg lm-header text-white rounded-t-lg p-6">
+        <h1 class="text-3xl font-bold mb-1">Wilfried METAIS</h1>
+
+        <div class="flex flex-wrap gap-5">
+          <span class="font-semibold"> metais.wilfried@hotmail.com </span>
+
+          <span class="numero-telephone font-semibold"></span>
+
+          <div class="flex items-center">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                fill-rule="evenodd"
+                d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                clip-rule="evenodd"
+              />
+            </svg>
+
+            <span class="font-semibold"> Valence, France </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- =================================================
+             CONTENU
+             ================================================= -->
+
+      <div class="lm-content p-8">
+        <!-- DATE -->
+
+        <div class="mb-6 text-right text-gray-600">
+          Valence, <span id="date-du-jour"></span>
+        </div>
+
+        <!-- OBJET -->
+
+        <div class="mb-10 mt-6">
+          <p class="font-semibold text-gray-800">
+            Subject: Application for the Helicopter Pilot Position
+          </p>
+        </div>
+
+        <!-- DESTINATAIRE -->
+
+        <p class="mb-6 text-gray-700">Dear Sir or Madam,</p>
+
+        <!-- =================================================
+                 CORPS DE LA LETTRE
+                 ================================================= -->
+
+        <div class="text-gray-700 leading-relaxed space-y-4 mb-6">
+          <p>
+            It is with great interest that I am submitting my application to join your team as a helicopter pilot.
+          </p>
+          <p>
+            A professional pilot since 2011, holding both a CPL(H) and a CPL(A), I have a total of 639 helicopter flight hours, 
+            including 497 hours as Pilot in Command. My background has allowed me to gain operational experience of 439 hours on 
+            several types of turbine aircraft, notably the Bell 206 and AS350 (from BA to B3e versions), including 388 hours as 
+            Pilot in Command.
+          </p>
+          <p>
+            Throughout my previous professional experiences, I have taken part in various activities: passenger transport, 
+            mountain flying, sea crossings to Corsica, scenic flights, and aerial photography. I have also operated as a navigator 
+            for power grid surveillance missions on behalf of Enedis. These activities have given me a solid understanding of 
+            aerial work, customer relations, and the specific requirements of commercial operations. Furthermore, I have a good 
+            command of English, both in the aviation context and in everyday communication, as certified by an ICAO Level 5 and 
+            a TOEIC score of 920.
+          </p>
+          <p>
+            I have also been able to enrich my skills in fixed-wing aviation, as well as in the flight training sector. My commercial 
+            experience within this school can be an additional asset in contributing to the development of your activities.
+          </p>
+          <p>
+            Today, I am looking to return to operational helicopter activities. Fully aware of the steps required to revalidate my 
+            ratings, I am ready to fully commit myself to meeting the regulatory and operational requirements of your company.
+          </p>
+          <p>
+            Mobile and available to join your team without delay, I am fully prepared to make a long-term commitment.
+          </p>
+        </div>
+
+        <!-- =================================================
+                 CONCLUSION
+                 ================================================= -->
+        <div class="text-gray-700 leading-relaxed mb-8 space-y-4">
+          <p>
+            I would be delighted to discuss my background and motivations with you. I remain entirely at your disposal for an 
+            interview and am able to travel at your convenience.
+          </p>
+          <p>
+            Thank you in advance for considering my application. 
+          </p>
+          <p>
+            Yours faithfully,
+          </p>
+        </div>
+
+        <!-- =================================================
+                 SIGNATURE
+        ================================================= -->
+
+        <div class="text-right mb-6">
+          <p class="font-semibold text-gray-800 text-lg mr-10">
+            Wilfried METAIS
+          </p>
+        </div>
+      </div>
+        <!-- =================================================
+            FOOTER CTA
+        ================================================= -->
+
+        <div class="lm-footer gradient-bg text-white p-4 rounded-b-lg text-center">
+          <p class="font-semibold mb-1">Available for an interview</p>
+          <p class="font-semibold text-sm">
+            metais.wilfried@hotmail.com • <span class="numero-telephone"></span>
+          </p>
+        </div>
+    </div>
+
+    <script>
+      const spanDate = document.getElementById('date-du-jour');
+      const aujourdHui = new Date();
+        
+      spanDate.textContent = aujourdHui.toLocaleDateString('en-US', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric'
+      });
+
+      const numeros = document.getElementsByClassName('numero-telephone');
+      const numero = "+33 6 79 38 15 06";
+      for (let i = 0; i < numeros.length; i++) {
+          numeros[i].textContent = numero;
+      }
+    </script>
+  </body>
+</html>

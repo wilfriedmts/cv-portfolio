@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /
+Disallow: /36_2376_284667/
+Disallow: /36_2376_435426/
+Disallow: /37_2376_284667/
+Disallow: /37_2376_435426/

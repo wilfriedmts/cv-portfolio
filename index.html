@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Accès aux CV de Wilfried Metais</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    /* Palette du thème : Hélicoptère = bleu vif / Avion = gris acier. */
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            air:   { DEFAULT: '#0B3A5B', mid: '#176B87', light: '#E8F4F8', border: '#C6DDE6' },
+            heli:  { DEFAULT: '#087EA4', dark: '#075A76', light: '#E6F5FA', border: '#A9D9E6' },
+            plane: { DEFAULT: '#647887', dark: '#435560', light: '#EEF2F4', border: '#C4CFD5' }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    .gradient-bg { background: linear-gradient(135deg, #0B3A5B 0%, #176B87 100%); }
+  </style>
+</head>
+
+<body class="bg-gray-400 font-sans">
+
+  <main class="min-h-screen flex flex-col items-center justify-center gap-3 p-6">
+
+    <!-- Barre d'actions : changement de langue -->
+    <div class="w-full max-w-sm flex justify-end">
+      <div class="inline-flex items-center bg-white rounded-full shadow-md border border-air-border p-1">
+        <a href="index-en.html" hreflang="en" lang="en" title="English version" aria-label="English version"
+           class="flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-semibold text-air hover:bg-air-light transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="24" height="12" class="block rounded-sm">
+            <clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
+            <clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath>
+            <g clip-path="url(#s)">
+              <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
+              <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+              <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/>
+              <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
+              <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
+            </g>
+          </svg>
+          EN
+        </a>
+      </div>
+    </div>
+
+    <!-- Carte d'accès -->
+    <div class="w-full max-w-sm bg-white rounded-xl shadow-2xl p-8 text-center">
+      <h1 class="text-2xl font-bold text-air">Bienvenue</h1>
+      <p class="mt-2 text-gray-600">Veuillez saisir votre code d'accès.</p>
+
+      <form id="access-form" class="mt-6 space-y-3" novalidate>
+        <label for="code" class="sr-only">Code d'accès</label>
+        <input id="code" type="text" placeholder="Code d'accès" autocomplete="off" autofocus
+               class="w-full px-3 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-air-mid focus:border-air-mid">
+        <button type="submit"
+                class="w-full py-3 rounded-md text-white font-semibold gradient-bg hover:opacity-90 transition-opacity cursor-pointer">
+          OK
+        </button>
+        <p id="error" role="alert" class="min-h-[1.25rem] text-sm text-red-600"></p>
+      </form>
+    </div>
+
+  </main>
+
+  <script>
+    /* Code d'accès -> page du CV (français). Un seul endroit à modifier. */
+    const accessCodes = {
+      "362328": "./36_2376_284667/index.html",
+      "362343": "./36_2376_435426/index.html",
+      "372328": "./37_2376_284667/index.html",
+      "372343": "./37_2376_435426/index.html",
+    };
+
+    const form  = document.getElementById("access-form");
+    const input = document.getElementById("code");
+    const error = document.getElementById("error");
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const code = input.value.trim();
+
+      // Object.hasOwn : évite qu'un mot comme "constructor" soit accepté comme code
+      if (Object.hasOwn(accessCodes, code)) {
+        window.location.href = accessCodes[code];
+      } else {
+        error.textContent = "Code invalide, veuillez réessayer.";
+        input.select();
+      }
+    });
+
+    // Efface le message d'erreur dès que l'on retape
+    input.addEventListener("input", () => { error.textContent = ""; });
+  </script>
+
+</body>
+
+</html>
